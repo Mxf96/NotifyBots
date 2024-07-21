@@ -18,6 +18,7 @@ body {
   background: linear-gradient(135deg, #7289da, #99aab5);
   padding: 60px 20px;
   text-align: center;
+  position: relative;
 }
 
 .container {
@@ -132,4 +133,24 @@ body {
 
 .command-text strong {
   color: #ffffff;
+}
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.language-select {
+  background-color: #5865f2;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.language-select:hover {
+  background-color: #4752c4;
 }

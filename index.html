@@ -8,60 +8,83 @@
     <link
       rel="icon"
       href="./assets/img/NotifyBot-removebg.png"
-      type="image/x-icon" />
+      type="image/x-icon"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://discord.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="bot-image">
-        <img src="./assets/img/NotifyBot.jpg" alt="NotifyBot" />
+    <div class="hero">
+      <div class="container">
+        <div class="header">
+          <img src="./assets/img/NotifyBot.jpg" alt="NotifyBot" class="logo" />
+          <h1 class="title">Welcome to NotifyBot</h1>
+          <p class="tagline">
+            Invite NotifyBot to your server and stay notified!
+          </p>
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=1258797171420041397&scope=bot&permissions=8"
+            class="invite-button"
+            rel="noopener noreferrer"
+            >Invite NotifyBot</a
+          >
+        </div>
       </div>
-      <h1>Welcome to NotifyBot</h1>
-      <p>Invite NotifyBot to your server and stay notified!</p>
-      <a
-        href="https://discord.com/oauth2/authorize?client_id=1258797171420041397&scope=bot&permissions=8"
-        class="invite-button"
-        >Invite NotifyBot</a
-      >
     </div>
-    <div class="read">
-      <h2>Commands Offered by NotifyBot</h2>
-      <p>
-        <strong>/setchannel</strong>: Configure the text channel for
-        notifications.<br />
-        <strong>Usage:</strong> /setchannel &lt;channel&gt;<br />
-        <strong>Description:</strong> This command sets the specified text
-        channel where the bot will send notifications about members joining or
-        switching voice channels.
-      </p>
-      <p>
-        <strong>/setprotected</strong>: Configure the protected members.<br />
-        <strong>Usage:</strong> /setprotected members: &lt;member1&gt;
-        &lt;member2&gt; ...<br />
-        <strong>Description:</strong> This command adds the specified members to
-        the protected list. Protected members will not be automatically banned
-        by the bot.
-      </p>
-      <p>
-        <strong>/removeprotected</strong>: Remove members from the protected
-        list.<br />
-        <strong>Usage:</strong> /removeprotected members: &lt;member1&gt;
-        &lt;member2&gt; ...<br />
-        <strong>Description:</strong> This command removes the specified members
-        from the protected list. If these members join the server and are not in
-        the protected list, they will be automatically banned by the bot.
-      </p>
+    <div class="content">
+      <div class="container">
+        <div class="commands">
+          <h2>Commands Offered by NotifyBot</h2>
+          <div class="command">
+            <div class="command-text">
+              <h3>/setchannel :</h3>
+              <p>
+                <strong>Usage:</strong> /setchannel &lt;channel&gt;<br />
+                <strong>Description:</strong> Configure the text channel for
+                notifications. This command sets the specified text channel where
+                the bot will send notifications about members joining or switching
+                voice channels.
+              </p>
+            </div>
+            <img src="./assets/img/setchannel.png" alt="Command /setchannel" class="command-img" />
+          </div>
+          <div class="command">
+            <div class="command-text">
+              <h3>/setprotected :</h3>
+              <p>
+                <strong>Usage:</strong> /setprotected members: &lt;member1&gt;
+                &lt;member2&gt; ...<br />
+                <strong>Description:</strong> Configure the protected members.
+                This command adds the specified members to the protected list.
+                Protected members will not be automatically banned by the bot.
+              </p>
+            </div>
+            <img src="./assets/img/setprotected.png" alt="Command /setprotected" class="command-img" />
+          </div>
+          <div class="command">
+            <div class="command-text">
+              <h3>/removeprotected :</h3>
+              <p>
+                <strong>Usage:</strong> /removeprotected members: &lt;member1&gt;
+                &lt;member2&gt; ...<br />
+                <strong>Description:</strong> Remove members from the protected
+                list. This command removes the specified members from the
+                protected list. If these members join the server and are not in the
+                protected list, they will be automatically banned by the bot.
+              </p>
+            </div>
+            <img src="./assets/img/removeprotected.png" alt="Command /removeprotected" class="command-img" />
+          </div>
+          <div class="command">
+            <div class="command-text">
+              <h3>Attention to the Name :</h3>
+            <img src="./assets/img/name.png" alt="Warning name" class="command-img" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="notification">
-      <img src="./assets/img/setchannel.png" alt="Command /setchannel" />
-    </div>
-    <div class="protect">
-      <img src="./assets/img/setprotected.png" alt="Command /setprotected" />
-      <img
-        src="./assets/img/removeprotected.png"
-        alt="Command /removeprotected" />
-    </div>
-    <div class="name">
-      <img src="./assets/img/name.png" alt="Name" />
-    </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

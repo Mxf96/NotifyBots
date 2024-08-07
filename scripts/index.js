@@ -74,6 +74,24 @@ function changeLanguage(lang) {
         description:
           "Play rock-paper-scissors. This command plays a game of rock-paper-scissors with the bot.",
       },
+      createpoll: {
+        title: "/createpoll :",
+        usage: "Usage: /createpoll &lt;question&gt; &lt;options&gt;",
+        description:
+          "Create a poll with multiple options. This command creates a poll with the given question and options separated by commas.",
+      },
+      vote: {
+        title: "/vote :",
+        usage: "Usage: /vote &lt;poll_id&gt; &lt;option&gt;",
+        description:
+          "Vote for an option in a poll. This command allows you to vote for a specific option in a poll.",
+      },
+      closepoll: {
+        title: "/closepoll :",
+        usage: "Usage: /closepoll &lt;poll_id&gt;",
+        description:
+          "Close a poll and display the results. This command closes the specified poll and displays the results.",
+      },
       attention: {
         title: "Attention to the Name :",
       },
@@ -139,6 +157,24 @@ function changeLanguage(lang) {
         usage: "Usage : /rockpaperscissors &lt;choice&gt;",
         description:
           "Jouer à pierre-feuille-ciseaux. Cette commande joue à pierre-feuille-ciseaux avec le bot.",
+      },
+      createpoll: {
+        title: "/createpoll :",
+        usage: "Usage : /createpoll &lt;question&gt; &lt;options&gt;",
+        description:
+          "Créer un sondage avec plusieurs options. Cette commande crée un sondage avec la question donnée et les options séparées par des virgules.",
+      },
+      vote: {
+        title: "/vote :",
+        usage: "Usage : /vote &lt;poll_id&gt; &lt;option&gt;",
+        description:
+          "Voter pour une option dans un sondage. Cette commande permet de voter pour une option spécifique dans un sondage.",
+      },
+      closepoll: {
+        title: "/closepoll :",
+        usage: "Usage : /closepoll &lt;poll_id&gt;",
+        description:
+          "Fermer un sondage et afficher les résultats. Cette commande ferme le sondage spécifié et affiche les résultats.",
       },
       attention: {
         title: "Attention au Nom :",
@@ -217,5 +253,26 @@ function changeLanguage(lang) {
   commandElements[9].querySelector("p").innerHTML = `
     <strong>${texts[lang].rockpaperscissors.usage}</strong><br />
     <strong>Description:</strong> ${texts[lang].rockpaperscissors.description}
+  `;
+
+  commandElements[10].querySelector("h3").innerHTML =
+    texts[lang].createpoll.title;
+  commandElements[10].querySelector("p").innerHTML = `
+    <strong>${texts[lang].createpoll.usage}</strong><br />
+    <strong>Description:</strong> ${texts[lang].createpoll.description}
+  `;
+
+  commandElements[11].querySelector("h3").innerHTML =
+    texts[lang].vote.title;
+  commandElements[11].querySelector("p").innerHTML = `
+    <strong>${texts[lang].vote.usage}</strong><br />
+    <strong>Description:</strong> ${texts[lang].vote.description}
+  `;
+
+  commandElements[12].querySelector("h3").innerHTML =
+    texts[lang].closepoll.title;
+  commandElements[12].querySelector("p").innerHTML = `
+    <strong>${texts[lang].closepoll.usage}</strong><br />
+    <strong>Description:</strong> ${texts[lang].closepoll.description}
   `;
 }
